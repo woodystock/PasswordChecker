@@ -1,0 +1,70 @@
+:root {
+    --neongreen: #20C20E;
+    --neonred: #FF0000;
+    --neonorange: #FF6600;
+}
+
+html {
+    font-size: 100%;
+    background-color: black;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hacker-text {
+    color: var(--neongreen);
+}
+
+.password-input {
+    font-size: 100%;
+    width: 300px;
+    background-color: black;
+    border: 5px solid var(--neongreen);
+}
+
+.strength-bar {
+    border: none;
+    width: 310px;
+}
+
+.strength-bar::-moz-progress-bar {
+    background: lightcolor;
+}
+
+.strength-bar::-webkit-progress-value {
+    background: grey;
+}
+
+.strength-bar::-webkit-progress-bar {
+    background: var(--neonred);
+}
+
+$strengthColours: (
+    "poor": var(--neonred),
+    "medium": var(--neonorange),
+    "strong": var(--neongreen)
+);
+
+@each $strengthColour, $i in $strengthColours {
+    .strength-bar--#{$strengthColour} {
+        border: none;
+        width: 310px;
+    }
+
+    .strength-bar--#{$strengthColour}::-webkit-progress-value {
+        background: $i;
+    }
+
+    .strength-bar--#{$strengthColour}::-webkit-progress-bar {
+        background: grey;
+    }
+}
+
+.output-display {
+    color: var(--neongreen);
+}

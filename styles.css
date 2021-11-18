@@ -1,0 +1,90 @@
+:root {
+  --neongreen: #20C20E;
+  --neonred: #FF0000;
+  --neonorange: #FF6600;
+}
+
+html {
+  font-size: 100%;
+  background-color: black;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hacker-text {
+  color: var(--neongreen);
+}
+
+.password-input {
+  font-size: 100%;
+  width: 300px;
+  background-color: black;
+  border: 5px solid var(--neongreen);
+}
+
+.strength-bar {
+  border: none;
+  width: 310px;
+}
+
+.strength-bar::-moz-progress-bar {
+  background: lightcolor;
+}
+
+.strength-bar::-webkit-progress-value {
+  background: grey;
+}
+
+.strength-bar::-webkit-progress-bar {
+  background: var(--neonred);
+}
+
+.strength-bar--poor {
+  border: none;
+  width: 310px;
+}
+
+.strength-bar--poor::-webkit-progress-value {
+  background: var(--neonred);
+}
+
+.strength-bar--poor::-webkit-progress-bar {
+  background: grey;
+}
+
+.strength-bar--medium {
+  border: none;
+  width: 310px;
+}
+
+.strength-bar--medium::-webkit-progress-value {
+  background: var(--neonorange);
+}
+
+.strength-bar--medium::-webkit-progress-bar {
+  background: grey;
+}
+
+.strength-bar--strong {
+  border: none;
+  width: 310px;
+}
+
+.strength-bar--strong::-webkit-progress-value {
+  background: var(--neongreen);
+}
+
+.strength-bar--strong::-webkit-progress-bar {
+  background: grey;
+}
+
+.output-display {
+  color: var(--neongreen);
+}
+
+/*# sourceMappingURL=styles.css.map */
